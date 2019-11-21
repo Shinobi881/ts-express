@@ -13,6 +13,7 @@ rules:
   import/no-unresolved: 0
   import/prefer-default-export: 0
   typescript/no-unused-vars: warn
+  max-len: 2
   # react/jsx-filename-extension:
   #     extensions:
   #       - '.jsx'
