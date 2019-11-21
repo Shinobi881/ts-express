@@ -1,19 +1,19 @@
-  env:
-    node: true
-  parser: '@typescript-eslint/parser'
-  extends: 
-    - 'plugin:@typescript-eslint/recommended'
-  
-  parserOptions: 
-    ecmaVersion: 2018
-    sourceType: module
+env:
+  node: true
+extends:
+  - 'airbnb'
 
-  rules: 
-    semi: error
-    quotes: 
-      - error
-      - single
-    '@typescript-eslint/explicit-function-return-type': off
-    '@typescript-eslint/no-explicit-any': 1
-    '@typescript-eslint/no-inferrable-types': 1
-    '@typescript-eslint/no-unused-vars': warn
+plugins:
+  - typescript
+  - '@typescript-eslint'
+
+parser: '@typescript-eslint/parser'
+
+rules:
+  import/no-unresolved: 0
+  import/prefer-default-export: 0
+  typescript/no-unused-vars: warn
+  # react/jsx-filename-extension:
+  #     extensions:
+  #       - '.jsx'
+  #       - '.tsx'

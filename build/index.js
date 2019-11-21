@@ -90,11 +90,23 @@
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst express_1 = __importDefault(__webpack_require__(/*! express */ \"express\"));\nconst app = express_1.default();\nconst { PORT = 3000 } = process.env;\napp.get('/', (req, res) => {\n    res.send({\n        message: 'hello world',\n    });\n});\napp.listen(PORT, () => {\n    console.log('server started at http://localhost:' + PORT);\n});\n\n\n//# sourceURL=webpack:///./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _routes_loginRoutes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./routes/loginRoutes */ \"./src/routes/loginRoutes.ts\");\n\n\nconst app = express__WEBPACK_IMPORTED_MODULE_0___default()();\nconst { PORT = 3000 } = process.env;\napp.use(_routes_loginRoutes__WEBPACK_IMPORTED_MODULE_1__[\"router\"]);\napp.listen(PORT, () => {\n    console.log(`Listening on port ${PORT}`);\n});\n\n\n//# sourceURL=webpack:///./src/index.ts?");
+
+/***/ }),
+
+/***/ "./src/routes/loginRoutes.ts":
+/*!***********************************!*\
+  !*** ./src/routes/loginRoutes.ts ***!
+  \***********************************/
+/*! exports provided: router */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"router\", function() { return router; });\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n\nconst router = Object(express__WEBPACK_IMPORTED_MODULE_0__[\"Router\"])();\nrouter.get('/login', (req, res) => {\n    res.send(`\n    <div>\n      <h1>Hello World!</h1>\n    </div>\n  `);\n});\n\n\n\n//# sourceURL=webpack:///./src/routes/loginRoutes.ts?");
 
 /***/ }),
 
